@@ -2,6 +2,7 @@
 
 $pageTitle = 'Sửa danh mục';
 
+require_once '/var/www/src/config/admin-auth.php';
 require_once '/var/www/src/config/database.php';
 
 $error = '';

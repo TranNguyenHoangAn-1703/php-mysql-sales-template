@@ -1,5 +1,6 @@
 <?php
 
+require_once '/var/www/src/config/admin-auth.php';
 require_once '/var/www/src/config/database.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {

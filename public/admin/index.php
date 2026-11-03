@@ -1,4 +1,7 @@
 <?php
+
+require_once '/var/www/src/config/admin-auth.php';
+
 $pageTitle = 'Quản trị hệ thống';
 
 require_once '/var/www/src/includes/admin/header.php';

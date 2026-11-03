@@ -36,7 +36,10 @@
 
             </ul>
 
-            <a class="btn btn-outline-light btn-sm" href="/">Về trang bán hàng</a>
+            <div class="d-flex gap-2">
+                <a class="btn btn-outline-light btn-sm" href="/">Về trang bán hàng</a>
+                <a class="btn btn-outline-light btn-sm" href="/admin/logout.php">Đăng xuất</a>
+            </div>
         </div>
     </div>
 </nav>

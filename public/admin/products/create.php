@@ -2,6 +2,7 @@
 
 $pageTitle = 'Thêm sản phẩm';
 
+require_once '/var/www/src/config/admin-auth.php';
 require_once '/var/www/src/config/database.php';
 require_once '/var/www/src/helpers/upload.php';
 

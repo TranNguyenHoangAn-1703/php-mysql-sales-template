@@ -2,6 +2,7 @@
 
 $pageTitle = 'Chi tiết đơn hàng';
 
+require_once '/var/www/src/config/admin-auth.php';
 require_once '/var/www/src/config/database.php';
 require_once '/var/www/src/helpers/orders.php';
 

@@ -2,6 +2,7 @@
 
 $pageTitle = 'Quản lý sản phẩm';
 
+require_once '/var/www/src/config/admin-auth.php';
 require_once '/var/www/src/config/database.php';
 
 $result = $conn->query("

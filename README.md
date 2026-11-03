@@ -40,3 +40,8 @@ public/           trang web (admin, api, uploads)
 ## Tài khoản
 
 Dữ liệu mẫu không có tài khoản đăng nhập. Hãy tạo tài khoản ở `/register.php`.
+
+Khu quản trị tại `/admin/` yêu cầu đăng nhập riêng:
+
+- Tên đăng nhập: `admin`
+- Mật khẩu: `123456`
