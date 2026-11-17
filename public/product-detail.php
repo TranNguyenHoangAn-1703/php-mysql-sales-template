@@ -116,13 +116,20 @@ $flash = $_GET['added'] ?? '';
             </p>
 
             <?php if ($stock > 0): ?>
-                <form action="/cart.php" method="post" class="d-flex gap-2 align-items-center">
-                    <input type="hidden" name="action" value="add">
-                    <input type="hidden" name="product_id" value="<?= (int) $product['ProductID'] ?>">
-                    <input type="number" name="quantity" value="1" min="1" max="<?= $stock ?>"
-                           class="form-control" style="width: 100px;">
-                    <button type="submit" class="btn btn-primary">Thêm vào giỏ</button>
-                </form>
+                <?php if (isset($_SESSION['customer_id'])): ?>
+                    <form action="/cart.php" method="post" class="d-flex gap-2 align-items-center">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="product_id" value="<?= (int) $product['ProductID'] ?>">
+                        <input type="number" name="quantity" value="1" min="1" max="<?= $stock ?>"
+                               class="form-control" style="width: 100px;">
+                        <button type="submit" class="btn btn-primary">Thêm vào giỏ</button>
+                    </form>
+                <?php else: ?>
+                    <a class="btn btn-primary"
+                       href="/login.php?redirect=<?= rawurlencode('/product-detail.php?id=' . (int) $product['ProductID']) ?>">
+                        Đăng nhập để thêm vào giỏ
+                    </a>
+                <?php endif; ?>
                 <?php if ($inCart > 0): ?>
                     <p class="text-muted mt-2">Trong giỏ của bạn đang có <?= $inCart ?> sản phẩm này.</p>
                 <?php endif; ?>

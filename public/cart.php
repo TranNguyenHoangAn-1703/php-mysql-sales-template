@@ -32,6 +32,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'] ?? '';
     $productID = (int) ($_POST['product_id'] ?? 0);
 
+    if ($action === 'add' && !isset($_SESSION['customer_id'])) {
+        $redirect = $productID > 0
+            ? '/product-detail.php?id=' . $productID
+            : '/products.php';
+        header('Location: /login.php?redirect=' . rawurlencode($redirect));
+        exit;
+    }
+
     if ($action === 'add') {
 
         $quantity = max(1, (int) ($_POST['quantity'] ?? 1));
